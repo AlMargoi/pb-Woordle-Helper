@@ -25,13 +25,13 @@ def validate_entries(P):
 
 vcmd_entries = (root.register(validate_entries), '%P')
 
-good_entries_label = Label(root, text="Enter good, confirmed letters: ", anchor="e", width=40)
+good_entries_label = Label(root, text="Enter good, confirmed letters: ", anchor="e", width=30)
 good_entries_label.grid(row=0, column=0)
 good_entries = Entry(root, width=15, font=15, bd=10, bg="#FEFED3", validate="key", validatecommand=vcmd_entries)
 good_entries.grid(row=0, column=1)
 
 # Bad entries:
-bad_entries_label = Label(root, text="Enter bad, confirmed letters: ", anchor="e", width=40)
+bad_entries_label = Label(root, text="Enter bad, confirmed letters: ", anchor="e", width=30)
 bad_entries_label.grid(row=1, column=0)
 bad_entries = Entry(root, width=15, font=15, bd=10, bg="#FA6E55", validate="key", validatecommand=vcmd_entries)
 bad_entries.grid(row=1, column=1)
@@ -51,7 +51,7 @@ def validate_perf_entries(P):
 
 vcmd_perf_entries = (root.register(validate_perf_entries), '%P')
 
-perfect_entries_label = Label(root, text="Enter known position entries, leave empty for unknown: ", anchor="e", width=40)
+perfect_entries_label = Label(root, text="Enter known position entries, leave empty for unknown: ", anchor="e", width=30, wraplength=200)
 perfect_entries_label.grid(row=2, column=0)
 perfect_entries1 = Entry(perfect_entries_frame, width=2, font=15, bd=7, bg="#5CFC51", validate="key", validatecommand=vcmd_perf_entries)
 perfect_entries1.grid(row=0, column=0, sticky="w")
