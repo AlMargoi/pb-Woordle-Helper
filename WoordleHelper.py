@@ -16,7 +16,9 @@ perfect_entries_frame.grid(row=2, column=1)
 # Good entries:
 def validate_entries(P):
     # Validation function for perfect entries (one single letter, no more)
-    if len(P) >= 0 and P.isalpha():
+    if len(P) == 0:
+        return True
+    elif len(P) > 0 and P.isalpha():
         # empty Entry is ok
         return True
     else:
